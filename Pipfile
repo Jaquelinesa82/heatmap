@@ -10,6 +10,8 @@ dj-database-url = "*"
 psycopg2-binary = "*"
 gunicorn = "*"
 pytest-django = "*"
+geocoder = "*"
+folium = "*"
 
 [dev-packages]
 flake8 = "*"
