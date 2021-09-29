@@ -9,7 +9,7 @@ def index(request):
     data = Data.objects.all()
     data_list = Data.objects.values_list('latitude', 'longitude', 'population')
 
-    map1 = folium.Map(location=[-15.900000, -47.882778], zoom_start=11)
+    map1 = folium.Map(location=[-15.900000, -47.882778], zoom_start=4)
 
     plugins.HeatMap(data_list).add_to(map1)
     plugins.Fullscreen(position='topright').add_to(map1)
@@ -19,3 +19,8 @@ def index(request):
         'map1': map1
     }
     return render(request, 'dashboard/index.html', context)
+
+
+def list_all_data(request):
+    data = Data.objects.all()
+    return render(request, 'index.html')
