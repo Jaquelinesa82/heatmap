@@ -1,5 +1,5 @@
 from django.db import models
-
+import geocoder
 # Create your models here.
 
 
@@ -12,6 +12,11 @@ class Data(models.Model):
 
     class Meta:
         verbose_name_plural = 'Data'
+
+    def save(self, *args, **kwargs):
+        self.latitude = geocoder.osm(self.city).lat
+        self.longitude = geocoder.osm(self.city).lng
+        return super().save(*args, **kwargs)
 
     def __str__(self):
         return self.city
