@@ -2,6 +2,25 @@
 {% block title %}Heatmap{% endblock %}
 
 {% block content %}
+<nav class="navbar navbar-expand-lg navbar-info bg-info">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="/">Heatmap<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <div class="container">
     <div class="row mt-4">
         <div class="col-md-10 offset-md-1">
@@ -11,15 +30,13 @@
 </div>
 <br>
 
-
-
 <div class="container">
     <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-6"><h2>Data <b>Details</b></h2></div>
-                    <div class="col-sm-4">
+                     <div class="col-sm-6"><h2>Data <b>Details</b></h2></div>
+                    <div class="col-sm-2">
                     </div>
                 </div>
             </div>
@@ -31,7 +48,7 @@
                     <th>População</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
-                    <th>Actions</th>
+                    <th>Option</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -44,6 +61,8 @@
                     <td>
                         <a href="#" class="view" title="View" data-toggle="tooltip"><i
                                 class="material-icons">&#xE417;</i></a>
+                        <a href="#" class="add" title="Add" data-toggle="tooltip"><i
+                                class="material-icons">&#xE145;</i></a>
                         <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
                                 class="material-icons">&#xE254;</i></a>
                         <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
