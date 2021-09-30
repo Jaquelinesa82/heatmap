@@ -8,6 +8,7 @@ class Data(models.Model):
     population = models.PositiveIntegerField(null=True)
     latitude = models.FloatField(default=0)
     longitude = models.FloatField(default=0)
+    active = models.BooleanField(default=True)
 
 
     class Meta:
@@ -19,4 +20,4 @@ class Data(models.Model):
         return super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.city
+        return str(self.id)
