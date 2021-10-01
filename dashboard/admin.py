@@ -5,7 +5,3 @@ from .models import Data
 @admin.register(Data)
 class DataAdmin(admin.ModelAdmin):
     list_display = ['id', 'city', 'population', 'latitude', 'longitude']
-
-
-
-

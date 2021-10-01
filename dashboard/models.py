@@ -11,6 +11,7 @@ class Data(models.Model):
     active = models.BooleanField(default=True)
 
 
+
     class Meta:
         verbose_name_plural = 'Data'
 
@@ -20,4 +21,4 @@ class Data(models.Model):
         return super().save(*args, **kwargs)
 
     def __str__(self):
-        return str(self.id)
+        return self.city
