@@ -35,8 +35,9 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                     <div class="col-sm-6"><h2>Data <b>Details</b></h2></div>
-                    <div class="col-sm-2">
+                    <a class="col-sm-1" href="/"><h2>Dados</h2></a>
+                    <a class="col-sm-1" href="/data/register/"><h2>Cadastrar</h2></a>
+                    <div class="col-sm-8">
                     </div>
                 </div>
             </div>
@@ -48,7 +49,7 @@
                     <th>População</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
-                    <th>Option</th>
+                    <th>Choise</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -57,13 +58,13 @@
                     <td>{{ datas.city }}</td>
                     <td>{{ datas.population}}</td>
                     <td>{{ datas.latitude }}</td>
-                    <td>{{ datas.logintude }}</td>
+                    <td>{{ datas.longitude}}</td>
                     <td>
-                        <a href="#" class="view" title="View" data-toggle="tooltip"><i
-                                class="material-icons">&#xE417;</i></a>
-                        <a href="#" class="add" title="Add" data-toggle="tooltip"><i
-                                class="material-icons">&#xE145;</i></a>
-                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+                        <!--                        <a href="#" class="view" title="View" data-toggle="tooltip"><i-->
+                        <!--                                class="material-icons">&#xE417;</i></a>-->
+                        <!--                        <a href="data/register/" class="add" title="Add" data-toggle="tooltip"><i-->
+                        <!--                                class="material-icons">&#xE145;</i></a>-->
+                        <a href="data/register/" class="edit" title="Edit" data-toggle="tooltip"><i
                                 class="material-icons">&#xE254;</i></a>
                         <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                     </td>

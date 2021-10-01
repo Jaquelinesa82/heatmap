@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Data
 import folium
 from folium import plugins
+import geocoder
 # Create your views here.
 
 
@@ -25,3 +26,16 @@ def index(request):
 def list_all_data(request):
     data = Data.objects.filter(active=True)
     return render(request, 'dashboard/index.html', {'data': data})
+
+
+def register_data(request):
+    return render(request, 'dashboard/register.html')
+
+
+def register_submit(request):
+    city = request.POST.get('city')
+    population = request.POST.get('population')
+    latitude = request.GET.get('latitude')
+    longitude = request.GET.get('longitude')
+    data = Data.objects.create(city=city, population=population, latitude=latitude, longitude=longitude)
+    return redirect('/')
