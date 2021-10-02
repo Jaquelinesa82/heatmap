@@ -1,25 +1,7 @@
-{% extends 'partials/base.html' %}
+{% extends 'dashboard/base.html' %}
 {% block title %}Heatmap{% endblock %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-info bg-info">
-    <div class="container">
-        <a class="navbar-brand text-white" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="/">Heatmap<span
-                            class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
 
 <div class="container">
     <div class="row mt-4">
@@ -29,14 +11,13 @@
     </div>
 </div>
 <br>
-
 <div class="container">
     <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <a class="col-sm-1" href="/"><h2>Dados</h2></a>
-                    <a class="col-sm-1" href="/data/register/"><h2>Cadastrar</h2></a>
+                    <a class="col-sm-1" href="createData/"><h2>Cadastrar</h2></a>
                     <div class="col-sm-8">
                     </div>
                 </div>
@@ -49,7 +30,7 @@
                     <th>População</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
-                    <th>Choise</th>
+                    <th>=========</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -60,11 +41,7 @@
                     <td>{{ datas.latitude }}</td>
                     <td>{{ datas.longitude}}</td>
                     <td>
-                        <!--                        <a href="#" class="view" title="View" data-toggle="tooltip"><i-->
-                        <!--                                class="material-icons">&#xE417;</i></a>-->
-                        <!--                        <a href="data/register/" class="add" title="Add" data-toggle="tooltip"><i-->
-                        <!--                                class="material-icons">&#xE145;</i></a>-->
-                        <a href="data/register/" class="edit" title="Edit" data-toggle="tooltip"><i
+                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
                                 class="material-icons">&#xE254;</i></a>
                         <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                     </td>
