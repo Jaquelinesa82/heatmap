@@ -9,7 +9,7 @@ services:
       - ./.pgdata:/var/lib/postgresql/data
     environment:
       - LC_ALL=C.UTF-8
-      - POSTGRES_PASSWORD=mappro
-      - POSTGRES_USER=mappro
+      - POSTGRES_PASSWORD=devpro
+      - POSTGRES_USER=devpro
     ports:
-      - 5438:5432
+      - 5435:5432
