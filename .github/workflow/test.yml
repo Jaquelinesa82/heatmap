@@ -13,10 +13,10 @@ jobs:
       postgres:
         image: postgres:9.5
         env:
-          POSTGRES_USER: mappro
-          POSTGRES_PASSWORD: mappro
-          POSTGRES_DB: mapprodb
-        ports: ['5437:5432']
+          POSTGRES_USER: devpro
+          POSTGRES_PASSWORD: devpro
+          POSTGRES_DB: devprodb
+        ports: ['5435:5432']
 
     steps:
     - uses: actions/checkout@v2
