@@ -11,7 +11,6 @@ class Data(models.Model):
     active = models.BooleanField(default=True)
 
 
-
     class Meta:
         verbose_name_plural = 'Data'
 
