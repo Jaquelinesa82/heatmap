@@ -1,0 +1,29 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<h1 class="text-center">Atualizar Dados</h1>
+<br>
+<form action="/update/{{data.id}}" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="form-group">
+    <!--            <label for="id">Id</label>-->
+    <!--            <input type="text" class="form-control" name="id" value="{{ data.id }}" hidden>-->
+            <div class="form-group">
+                <label for="">Cidade</label>
+                <input type="text" class="form-control" name="city" value="{{ data.city }}">
+            </div>
+            <div class="form-group">
+                <label for="">População:</label>
+                <input type="text" class="form-control" name="population" value="{{ data.population }}">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" type="Submit">Update</button>
+            <a name="Cancelar" class="btn btn-danger" type="Reset" href="/">Cancelar</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<br>
+{% endblock %}
