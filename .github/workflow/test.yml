@@ -11,7 +11,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:9.5
+        image: postgres:11.5
         env:
           POSTGRES_USER: devpro
           POSTGRES_PASSWORD: devpro
