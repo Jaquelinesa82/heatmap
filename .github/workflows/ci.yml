@@ -31,9 +31,9 @@ jobs:
       run: |
         pip install pipenv
         pipenv sync --dev
-    - name: Lint with flake8
-      run: |
-        pipenv run flake8 .
+#    - name: Lint with flake8
+#      run: |
+#        pipenv run flake8 .
     - name: Test with pytest
       run: |
         pipenv run pytest --cov=mapproject
