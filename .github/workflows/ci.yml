@@ -9,15 +9,6 @@ jobs:
       PIPENV_IGNORE_VIRTUALENVS: 1
     runs-on: ubuntu-latest
 
-    services:
-      postgres:
-        image: postgres:11.5
-        env:
-          POSTGRES_USER: devpro
-          POSTGRES_PASSWORD: devpro
-          POSTGRES_DB: devprodb
-        ports: ['5435:5432']
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8

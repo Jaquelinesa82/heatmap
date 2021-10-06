@@ -15,7 +15,6 @@ def listData(request):
     plugins.HeatMap(data_list).add_to(map1)
     plugins.Fullscreen(position='topright').add_to(map1)
 
-
     map1 = map1._repr_html_()
     context = {
         'map1': map1,

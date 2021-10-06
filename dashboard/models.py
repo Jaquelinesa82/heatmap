@@ -10,7 +10,6 @@ class Data(models.Model):
     longitude = models.FloatField(default=0)
     active = models.BooleanField(default=True)
 
-
     class Meta:
         verbose_name_plural = 'Data'
 
