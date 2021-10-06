@@ -17,5 +17,5 @@ def test_title(resp):
     assert_contains(resp, '<title>Heatmap</title>')
 
 
-def test_listData_link(resp):
-    assert_contains(resp, f'href="{reverse("dashboard:listData")}"><h2>Dados</h2></a>')
+# def test_listData_link(resp):
+#     assert_contains(resp, f'href="{reverse("dashboard:listData")}"><h2>Dados</h2></a>')
